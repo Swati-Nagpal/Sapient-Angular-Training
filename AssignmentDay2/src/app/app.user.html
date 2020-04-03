@@ -1,0 +1,8 @@
+<h1>User details</h1>
+<ul>
+    <li *ngFor="let user of users">
+        Id: {{user.id}} | Name: {{user.name}} | Email: {{user.email}}
+        <app-address [address]="user.address"></app-address>
+        <app-company [company]="user.company"></app-company>
+    </li>
+</ul>
