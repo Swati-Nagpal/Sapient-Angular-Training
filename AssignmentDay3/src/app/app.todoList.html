@@ -1,0 +1,7 @@
+<app-todoForm (sendRequest)="readTodo($event)"></app-todoForm>
+<ul>
+    <li *ngFor="let todo of todos">
+        {{todo}}
+        <button (click)="removeTodo(todo)">Mark complete</button>
+    </li>
+</ul>

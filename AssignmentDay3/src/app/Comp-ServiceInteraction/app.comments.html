@@ -1,0 +1,15 @@
+<div>
+    <div *ngFor="let comment of comments">
+          <div class="card" style="width: 18rem; height: 25rem; border:1px solid gray; float:left; margin: 1rem;">
+            <div class="card-header" style="height: 6rem; font-style: italic;">
+                <h6>Name: {{comment.name}}</h6>
+                <h6>Email: {{comment.email}}</h6>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">{{comment.name}}</h4>
+              <p class="card-text">{{comment.body}}</p>
+              <p class="card-text" style="font-style: italic;">PostId: {{comment.postId}} | CommentId: {{comment.id}}</p>
+            </div>
+          </div>
+        </div>
+    </div>
