@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Todo Form Application</h1>
+  <form [formGroup]="todoSearchForm" novalidate>
+    <input type="search" class="form-control" placeholder="Please enter search term" [formControl]="searchField">
+    <ul>
+        <div *ngFor="let todo of filteredTodos" class="card" style="width: 18rem; height: 13rem; border:1px solid gray; float:left; margin: 1rem;">
+          <div class="card-header" style="height: 4rem; font-style: italic;">
+              <h6>User Id: {{ todo.userId }}</h6>
+              <h6>Id: {{ todo.id }}</h6>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ todo.title }}</h5>
+            <p class="card-text" style="font-style: italic;">{{ todo.completed? "Completed" : "Not Completed" }}</p>
+          </div>
+        </div>
+    </ul>
+  </form>
+</div>
