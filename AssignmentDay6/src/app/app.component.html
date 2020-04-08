@@ -1,0 +1,71 @@
+<div class="container">
+  <h1>Todo Form Application</h1>
+  <ul>
+      <table class="table table-striped" style="border: 1px solid lightgrey;">
+        <thead>
+          <tr>
+            <th scope="col">
+              <tr>User Id</tr>
+              <tr>
+                <div class="form-check form-check-inline">
+                  <input type="radio" (click)="setSortOption('userId','Asc')" class="form-check-input" name="Sort" value="Asc">
+                  <label class="form-check-label" for="Asc">Asc</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio" (click)="setSortOption('userId','Desc')" class="form-check-input" name="Sort" value="Desc">
+                  <label class="form-check-label" for="Desc">Desc</label>
+                </div>
+              </tr>
+            </th>
+            <th scope="col">
+              <tr>Todo Id</tr>
+              <tr>
+                <div class="form-check form-check-inline">
+                  <input type="radio" (click)="setSortOption('id','Asc')" class="form-check-input" name="Sort" value="Asc">
+                  <label class="form-check-label" for="Asc">Asc</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio" (click)="setSortOption('id','Desc')" class="form-check-input" name="Sort" value="Desc">
+                  <label class="form-check-label" for="Desc">Desc</label>
+                </div>
+              </tr>
+            </th>
+            <th scope="col">
+              <tr>Title</tr>
+              <tr>
+                <div class="form-check form-check-inline">
+                  <input type="radio" (click)="setSortOption('title','Asc')" class="form-check-input" name="Sort" value="Asc">
+                  <label class="form-check-label" for="Asc">Asc</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio" (click)="setSortOption('title','Desc')" class="form-check-input" name="Sort" value="Desc">
+                  <label class="form-check-label" for="Desc">Desc</label>
+                </div>
+              </tr>
+              </th>
+            <th scope="col">
+              <tr>Status</tr>
+              <tr>
+                <div class="form-check form-check-inline">
+                  <input type="radio" (click)="setSortOption('completed','Asc')" class="form-check-input" name="Sort" value="Asc">
+                  <label class="form-check-label" for="Asc">Asc</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio" (click)="setSortOption('completed','Desc')" class="form-check-input" name="Sort" value="Desc">
+                  <label class="form-check-label" for="Desc">Desc</label>
+                </div>
+              </tr>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let todo of todos | sortTodos: [sortOption,sortByColumn] | async ">
+            <td>{{ todo.userId }}</td>
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.title }}</td>
+            <td>{{ todo.completed? "Completed" : "Not Completed" }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ul>
+</div>
