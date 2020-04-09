@@ -1,0 +1,25 @@
+<h3 style="text-align: center;">Accounts</h3>
+<table class="table table-striped" style="border: 1px solid lightgrey; text-align: center;">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Narration</th>
+            <th>Cheque/Ref. No.</th>
+            <th>Value Date</th>
+            <th>Withdrawal</th>
+            <th>Deposit</th>
+            <th>Closing Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let acct of accounts">
+            <td>{{ acct.date }}</td>
+            <td>{{ acct.narration }}</td>
+            <td>{{ acct.chequeNo }}</td>
+            <td>{{ acct.valueDate }}</td>
+            <td>{{ acct.withdrawal }}</td>
+            <td>{{ acct.deposit }}</td>
+            <td>{{ acct.closingBalance }}</td>
+        </tr>
+    </tbody>
+</table>

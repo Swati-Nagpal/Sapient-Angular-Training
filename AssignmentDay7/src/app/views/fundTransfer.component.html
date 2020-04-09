@@ -1,0 +1,13 @@
+<h3 style="text-align: center;">Fund Transfer</h3>
+<div *ngFor="let option of options" class="card" style="width: 18rem; height: 13rem; border:1px solid gray; float:left; margin: 1rem; text-align: center;">
+    <div class="card-header" style="height: 4rem; font-style: italic;">
+        <a href="./fundtransfer"> {{ option.title }} </a>
+    </div>
+    <div class="card-body" style="">
+      <p class="card-text" style="font-style: italic;">{{ option.details }}</p> 
+      <a href="./fundtransfer" style="text-decoration: underline;">View Demo</a>
+      <div>
+        <button type="button" class="btn btn-primary">Go</button>
+      </div>
+    </div>
+</div>
