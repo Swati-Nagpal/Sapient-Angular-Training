@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BILL_PAYMENT_AND_RECHARGE_OPTIONS } from '../mockdata/billPayRecharge';
 
 @Component({
     selector: 'app-billPayAndRecharge',
@@ -13,15 +14,6 @@ export class BillPayAndRechargeComponent {
     constructor(private routerState: ActivatedRoute) { }
     ngOnInit() {
         this.title="With this new BillPay, you can now make online payments to over 260 billers across various categories including:";
-        this.options = [
-            "Electricity Bills",
-            "Telephone and Mobile Bills",
-            "Prepaid DTH/ Mobile Connection/ Data Card Recharge",
-            "Gas Bills",
-            "Mutual Funds.",
-            "Insurance Premiums.",
-            "Subscriptions.",
-            "Contribution to Charities"
-        ];
+        this.options = BILL_PAYMENT_AND_RECHARGE_OPTIONS;
     }
 }
